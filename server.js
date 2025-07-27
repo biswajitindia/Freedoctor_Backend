@@ -18,6 +18,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("Welcome to FreeDoctor API");
+})
+
 app.use("/api", doctorRoutes);
 app.use("/api", authRoutes);
 
